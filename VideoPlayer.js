@@ -217,6 +217,10 @@ export default class VideoPlayer extends Component {
     if (typeof this.props.onLoad === 'function') {
       this.props.onLoad(...arguments);
     }
+
+    setTimeout(() => {
+      this.methods.togglePlayPause();
+    }, 1500);
   }
 
   /**
